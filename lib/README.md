@@ -54,7 +54,7 @@ For example:
             stateManager.addStateChangeListener([incidents], 'App', incidents =>
                   this.setState({ incidents }))
             }
-      }
+        }
 
 4. removeStateChangeListener - unsubscirbe a component from a state changing by a specific path.
 For example:
@@ -63,4 +63,4 @@ For example:
           componentWillUnmount() {
             stateManager.removeStateChangeListener([incidents], 'App')
           }
-      }
+        }
