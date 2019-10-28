@@ -28,7 +28,7 @@ class Dispatcher extends EventEmitter {
 	}
 
 	_isScopesEqual(scope1: string[], scope2: string[]): boolean {
-		if (scope1.length !== scope2.length) return true
+		if (scope1.length !== scope2.length) return false
 		return scope1.every(key => scope2.includes(key))
 	}
 }
