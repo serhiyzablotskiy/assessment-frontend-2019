@@ -5,7 +5,7 @@ import dispatcher from './Dispatcher'
 
 jest.mock('./Dispatcher');
 
-function mockDispatcher(object, methods) {
+function mockDispatcher(object: any, methods: any) {
   return Object.keys(methods).map(key => {
     object[key].mockClear();
     return object[key].mockImplementation(methods[key]);
@@ -73,8 +73,8 @@ describe('StateManager', function() {
         getStateScope: () => scope,
         getInitialState: () => scopeValue,
         getActions: () => ({
-          testAction1: state => true,
-          testAction2: state => false
+          testAction1: (state: Map<string, any>) => true,
+          testAction2: (state: Map<string, any>) => false
         })
       };
 
